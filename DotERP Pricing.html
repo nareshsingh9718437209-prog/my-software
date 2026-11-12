@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DotERP Pricing</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#fff8e8;--sky:#e3f1fb;--navy:#0f4c81;--ink:#14243a;--mut:#51627a;--acc:#f59e0b;--accink:#2a1a00;--card:#fff;--line:#c9d8e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1a12;--sky:#10202f;--navy:#0b3558;--ink:#eef3f9;--mut:#a9b8ca;--card:#172a3d;--line:#2c4560;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1a12;--sky:#10202f;--navy:#0b3558;--ink:#eef3f9;--mut:#a9b8ca;--card:#172a3d;--line:#2c4560;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,Segoe UI,Arial,sans-serif;background:var(--sky);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+nav{background:var(--navy);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+nav .wrap{display:flex;align-items:center;gap:22px;height:56px;font-size:14px}
+.logo{font-weight:700;font-size:22px;letter-spacing:-.5px}.logo b{color:var(--acc)}.sp{flex:1}
+.btn{display:inline-block;background:var(--acc);color:var(--accink);font-weight:600;font-size:14px;padding:9px 18px;border-radius:4px;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(245,158,11,.45)}
+.pm{position:relative}.pm>button{background:none;border:0;color:#fff;font:inherit;cursor:pointer;height:56px;border-bottom:3px solid var(--acc)}
+.pd{position:absolute;top:100%;left:-10px;min-width:210px;background:var(--card);color:var(--ink);border-radius:0 0 8px 8px;box-shadow:0 18px 34px rgba(0,0,0,.25);padding:8px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}.pm.open .pd{opacity:1;visibility:visible;transform:none}
+.pd a{display:block;padding:11px 14px;border-radius:6px;font-weight:600;transition:background .2s,padding-left .2s}.pd a:hover{background:var(--sky);padding-left:20px}.pd small{display:block;font-weight:400;color:var(--mut);font-size:12px}
+.hero{background:var(--bg);padding:60px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.38),transparent 70%);right:6%;top:-80px;animation:drift 9s ease-in-out infinite alternate}
+h1{font-size:clamp(30px,4.5vw,46px);line-height:1.12;margin:0 0 12px;letter-spacing:-1px;max-width:640px;position:relative}
+.hero p{color:var(--mut);margin:0;position:relative}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:34px 0 18px}
+.tabs a{padding:9px 20px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:14px;transition:.25s}.tabs a:hover{transform:translateY(-2px)}.tabs a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tg{display:flex;width:max-content;margin:0 auto 14px;background:var(--card);padding:5px;border-radius:6px;gap:4px}.tg button{border:0;background:none;color:var(--ink);font:600 14px inherit;font-family:inherit;padding:10px 26px;border-radius:4px;cursor:pointer;transition:.25s}.tg button.on{background:var(--navy);color:#fff}
+.sub{text-align:center;color:var(--mut);font-size:14px;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pc{background:var(--card);border-radius:8px;padding:22px;box-shadow:0 4px 18px rgba(0,0,0,.08);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;animation:up .6s backwards}.pc:hover{transform:translateY(-8px);box-shadow:0 16px 32px rgba(0,0,0,.18)}
+.pc .t{display:flex;justify-content:space-between;font-weight:600}.pc .t small{font-weight:400;color:var(--mut);font-size:12px}
+.pc .pr{font-size:32px;font-weight:700;margin:14px 0 6px}.pc .ef{font-size:13px;color:var(--mut);min-height:44px;margin:0}
+.pc .btn{margin-top:auto;width:100%;text-align:center;padding:12px}.pc .bd{text-align:center;font-size:12px;color:var(--mut);margin-top:12px}
+.pc.hot{outline:2px solid var(--acc)}
+.box{max-width:720px;margin:46px auto 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.box .hd{background:var(--bg);display:flex;justify-content:center;gap:26px;flex-wrap:wrap;padding:14px;font-size:13px}
+.box h3{text-align:center;font-size:15px;margin:20px 0 14px}.fl{display:grid;grid-template-columns:repeat(4,1fr);gap:12px 16px;padding:0 24px 24px;font-size:13px}
+.fl span:before{content:"✔";color:var(--navy);margin-right:7px}
+.vc{display:block;width:max-content;margin:36px auto 0;background:var(--card);border:1px solid var(--acc);padding:12px 22px;border-radius:6px;font-weight:600;font-size:14px;transition:transform .2s}.vc:hover{transform:translateY(-3px)}
+section.cta{padding:70px 0}
+.cta .in{background:var(--navy);color:#fff;border-radius:8px;padding:34px;text-align:center}.cta h2{margin:0 0 8px}.cta p{margin:0 0 18px;opacity:.9}
+footer{background:var(--navy);color:#fff;padding:22px 0;font-size:13px;text-align:center;opacity:.95}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-60px,50px) scale(1.25)}}
+.fade{animation:up .5s}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.fl{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.fl{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+.hero .bg{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;position:relative;font-size:13px;font-weight:600}.hero .bg span{background:var(--card);padding:6px 14px;border-radius:99px;box-shadow:0 3px 10px rgba(0,0,0,.08);animation:up .6s backwards}.hero .bg span:nth-child(2){animation-delay:.12s}.hero .bg span:nth-child(3){animation-delay:.24s}
+.cart{position:relative;background:none;border:0;color:#fff;font-size:18px;cursor:pointer}.cart b{position:absolute;top:-8px;right:-10px;background:var(--acc);color:var(--accink);font-size:11px;border-radius:99px;min-width:18px;height:18px;display:flex;align-items:center;justify-content:center;transition:transform .3s}.cart b.bump{transform:scale(1.6)}
+.pc{position:relative}.rib{position:absolute;top:-12px;right:16px;background:var(--acc);color:var(--accink);font-size:11px;font-weight:700;padding:3px 12px;border-radius:99px}
+.sv{background:rgba(34,197,94,.2);color:var(--ink);font-size:12px;font-weight:600;padding:2px 10px;border-radius:99px;width:max-content;margin-top:10px}
+.cl{display:flex;gap:8px;align-items:flex-start;background:var(--bg);padding:8px 10px;border-radius:6px;font-size:12px;margin:6px 0 12px;cursor:pointer}
+.sh{text-align:center;font-size:clamp(22px,3vw,30px);margin:72px 0 28px;letter-spacing:-.5px}
+.tw{overflow-x:auto;background:var(--card);border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.08)}table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}th,td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left;font-weight:600}th{background:var(--bg)}tr{transition:background .2s}tr:hover td{background:var(--sky)}td.y{color:var(--navy);font-weight:700}
+.inc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.inc>div{background:var(--card);padding:22px;border-radius:8px;box-shadow:0 4px 18px rgba(0,0,0,.08)}.inc>div:hover{box-shadow:0 14px 28px rgba(0,0,0,.16)}.inc .ic{width:40px;height:40px;border-radius:10px;background:var(--sky);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px;transition:.3s}.inc>div:hover .ic{background:var(--acc);color:var(--accink);transform:rotate(-8deg) scale(1.12)}.inc h4{margin:0 0 6px}.inc p{margin:0;font-size:13px;color:var(--mut)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;background:linear-gradient(120deg,var(--navy),#0a6aa8,var(--navy));background-size:200% 200%;animation:bgm 14s ease infinite;color:#fff;border-radius:8px;padding:30px;text-align:center}.st b{font-size:34px;display:block}.st span{font-size:13px;opacity:.85}
+@keyframes bgm{50%{background-position:100% 50%}}
+.faq details{background:var(--card);border-radius:8px;padding:16px 20px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.06)}.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}.faq summary::after{content:"+";font-size:20px;transition:transform .3s}.faq details[open] summary::after{transform:rotate(45deg)}.faq p{margin:10px 0 0;color:var(--mut);font-size:14px;animation:up .4s}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:.35s;z-index:60}.toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.inc{grid-template-columns:1fr 1fr}.st{grid-template-columns:1fr}}@media(max-width:560px){.inc{grid-template-columns:1fr}}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#">Dot<b>ERP</b></a><span class="sp"></span>
+<div class="pm" id="pm"><button id="pb" aria-expanded="false">Pricing ▾</button><div class="pd"><a href="#doterp">DotERP<small>Business management software</small></a><a href="#vyapardot">VyaparDot<small>[Short description]</small></a><a href="#q2dot">Q2Dot<small>[Short description]</small></a></div></div>
+<button class="cart" aria-label="Cart">🛒<b id="cc">0</b></button><a class="btn" href="https://claude.ai/artifact/CSWb774RYWoU6QKEbEVm6A" target="_blank" rel="noopener">Download</a></div></nav>
+<header class="hero"><div class="wrap"><h1 id="h1"></h1><p id="hp">Now your subscription renews automatically.</p><div class="bg"><span>✔ No hidden charges</span><span>✔ Free expert assistance</span><span>✔ Switch to lifetime anytime</span></div></div></header>
+<main class="wrap" style="padding-top:10px;padding-bottom:60px"><div class="tabs" id="tabs"></div>
+<div id="v">
+<div class="tg" id="tg"><button class="on" data-m="single">Single User</button><button data-m="multi">Multi User</button></div>
+<p class="sub" id="sub"></p>
+<div class="grid" id="grid"></div>
+<div class="box"><div class="hd"><span>Free expert assistance</span><span>Includes support</span><span>Switch to lifetime license</span></div><h3>What you get</h3><div class="fl" id="fl"></div></div>
+<a class="vc" href="#">Video Call Sales Expert</a>
+<h2 class="sh">Compare <span class="sn"></span> plans</h2>
+<div class="tw"><table><tr><th>Feature</th><th>1 Month</th><th>3 Month</th><th>12 Month</th><th>Lifetime</th></tr><tr><td>Full feature access</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td></tr><tr><td>Free updates</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td></tr><tr><td>Expert support</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td></tr><tr><td>Cloud Access add-on</td><td>—</td><td class="y">✔</td><td class="y">✔</td><td>—</td></tr><tr><td>Auto-renewal</td><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td><td>—</td></tr><tr><td>You save</td><td>—</td><td>[x]%</td><td>[y]%</td><td>One-time payment</td></tr></table></div>
+<h2 class="sh">Included with every plan</h2>
+<div class="inc"><div><span class="ic">★</span><h4>Free expert assistance</h4><p>[Describe onboarding and setup help.]</p></div><div><span class="ic">⟳</span><h4>Regular updates</h4><p>[Describe free product and compliance updates.]</p></div><div><span class="ic">⚿</span><h4>Secure data</h4><p>[Describe backups and data security.]</p></div><div><span class="ic">☎</span><h4>Priority support</h4><p>[Describe support hours and channels.]</p></div></div>
+<div class="st"><div><b>[XX]+</b><span>Businesses using <span class="sn"></span></span></div><div><b>[XX]</b><span>Your key strength</span></div><div><b>[X] Years</b><span>Of experience</span></div></div>
+<h2 class="sh">Questions, answered</h2>
+<div class="faq"><details><summary>How does auto-renewal work?</summary><p>[Explain when and how the subscription renews, and how to cancel.]</p></details><details><summary>Can I upgrade or switch to a lifetime plan later?</summary><p>[Explain upgrade paths and any credit for the current plan.]</p></details><details><summary>Is GST included in the price?</summary><p>[Explain that 18% GST is added at checkout, and how GST invoices are issued.]</p></details><details><summary>What does multi user mean?</summary><p>[Explain how many PCs or users a multi user licence covers.]</p></details><details><summary>What is your refund policy?</summary><p>[Add your refund and cancellation terms.]</p></details></div>
+</div></main>
+<div class="toast" id="toast" role="status"></div>
+<section class="cta"><div class="wrap"><div class="in"><h2>Not sure which plan fits?</h2><p>Talk to our team and get a plan that suits your business.</p><a class="btn" href="#">Talk to an Expert</a></div></div></section>
+<footer>Copyright © 2026 DotERP [Company legal name] · Privacy Policy · Terms of Use</footer>
+<script>
+(function(){
+var S={doterp:{n:'DotERP',t:'Everything your business needs',f:['Fully loaded with all features','Invoicing & accounting','Inventory management','GST and compliance','Banking and cashflow','e-Invoicing and e-way bills','Connected services','Business operations']},
+vyapardot:{n:'VyaparDot',t:'[One line about VyaparDot]',f:['[Feature 1]','[Feature 2]','[Feature 3]','[Feature 4]','[Feature 5]','[Feature 6]','[Feature 7]','[Feature 8]']},
+q2dot:{n:'Q2Dot',t:'[One line about Q2Dot]',f:['[Feature 1]','[Feature 2]','[Feature 3]','[Feature 4]','[Feature 5]','[Feature 6]','[Feature 7]','[Feature 8]']}};
+var P=[['1 Month','Affordable plan'],['3 Month','Affordable plan · Flat [x]% off'],['12 Month','Affordable plan · Flat [y]% off'],['Lifetime','Best ROI plan']];
+var mode='single',k='doterp',$=function(i){return document.getElementById(i);};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e;}
+function draw(){
+var s=S[k];document.title=s.n+' Pricing';
+$('h1').textContent='Start small or go big with flexible '+s.n+' plans starting at ₹[price]';
+$('sub').textContent=s.n+(mode==='single'?' – suitable for businesses that need it on a single PC':' – suitable for teams that need it on multiple PCs');
+var tb=$('tabs');tb.textContent='';Object.keys(S).forEach(function(q){var a=el('a',q===k?'on':'',S[q].n);a.href='#'+q;tb.appendChild(a);});
+var g=$('grid');g.textContent='';
+P.forEach(function(p,i){var c=el('div','pc'+(i===2?' hot':''));c.style.animationDelay=i*.1+'s';if(i===2)c.appendChild(el('span','rib','Most popular'));
+var t=el('div','t');t.appendChild(el('span','',p[0]));t.appendChild(el('small','','+18% GST'));c.appendChild(t);
+if(i===1||i===2)c.appendChild(el('div','sv','Save [x]%'));c.appendChild(el('div','pr','₹ [price]'));
+c.appendChild(el('p','ef',i===3?'One-time payment':(i?'Effective price ₹[x]/month':'Auto-renew until cancelled')));if(i===1){var cl=el('label','cl'),cb=document.createElement('input');cb.type='checkbox';cl.appendChild(cb);cl.appendChild(el('span','','Add Cloud Access + ₹[x] for 3 months'));c.appendChild(cl);}
+var ab=el('button','btn','Add to Cart');ab.onclick=function(){cart(p[0]);};c.appendChild(ab);c.appendChild(el('div','bd',p[1]));g.appendChild(c);});
+var f=$('fl');f.textContent='';s.f.forEach(function(x){f.appendChild(el('span','',x));});
+document.querySelectorAll('.sn').forEach(function(x){x.textContent=s.n;});var v=$('v');v.classList.remove('fade');void v.offsetWidth;v.classList.add('fade');}
+var cc=0,tt;function cart(n){cc++;var b=$('cc');b.textContent=cc;b.classList.add('bump');setTimeout(function(){b.classList.remove('bump');},300);var t=$('toast');t.textContent=S[k].n+' · '+n+' plan added to cart';t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show');},2200);}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(a){a.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.12});document.querySelectorAll('.tw,.inc>div,.st,.faq details,.box').forEach(function(e,j){e.classList.add('rv');e.style.transitionDelay=(j%4)*.08+'s';io.observe(e);});}
+function route(){var h=location.hash.slice(1);k=S[h]?h:'doterp';draw();}
+addEventListener('hashchange',function(){route();$('pm').classList.remove('open');scrollTo({top:0,behavior:'smooth'});});
+$('tg').addEventListener('click',function(e){var m=e.target.getAttribute('data-m');if(!m)return;mode=m;[].forEach.call($('tg').children,function(b){b.classList.toggle('on',b===e.target);});draw();});
+var pm=$('pm'),pb=$('pb');pb.onclick=function(e){e.stopPropagation();var o=!pm.classList.contains('open');pm.classList.toggle('open',o);pb.setAttribute('aria-expanded',o);};
+if(matchMedia('(hover:hover)').matches){pm.addEventListener('mouseenter',function(){pm.classList.add('open');});pm.addEventListener('mouseleave',function(){pm.classList.remove('open');});}
+document.addEventListener('click',function(){pm.classList.remove('open');});
+route();
+})();
+</script>
+</body>
+</html>
