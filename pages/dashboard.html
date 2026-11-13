@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Dashboard - DotERP</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="DotERP customer dashboard with subscription and license details.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.dash-wrap{max-width:1100px;margin:0 auto;padding:36px 20px 60px}
+.dash-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px}
+.dash-head h1{font-size:clamp(28px,4vw,40px);margin:0}
+.dash-head p{color:var(--mut);margin:6px 0 0}
+.dash-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:22px 0 28px}
+.dash-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.dash-card small{display:block;color:var(--mut);font-size:12px;margin-bottom:6px}
+.dash-card b{font-size:20px;color:var(--navy)}
+.dash-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.panel h2{font-size:22px;text-align:left;margin:0 0 14px}
+.lic-table{width:100%;border-collapse:collapse;font-size:14px}
+.lic-table th,.lic-table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.lic-table th{color:var(--mut);font-weight:600;width:38%}
+.lic-table tr:last-child td,.lic-table tr:last-child th{border-bottom:0}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;background:#e7f7ec;color:#166534;border:1px solid #86efac}
+.badge.warn{background:#fff7ed;color:#9a3412;border-color:#fdba74}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.muted{color:var(--mut);font-size:13px}
+.list{margin:0;padding-left:18px;color:var(--mut);font-size:14px}.list li{margin:8px 0}
+@media(max-width:900px){.dash-cards{grid-template-columns:repeat(2,1fr)}.dash-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.dash-cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pg" id="pg"></div><nav><div class="wrap"><button class="links mm-t" aria-expanded="false" aria-controls="mega">Products <i>▾</i></button><a class="links" href="pricing.html">Pricing</a><button class="links mm-t cm-t" aria-expanded="false" aria-controls="cmega">Community <i>▾</i></button><button class="links mm-t ch-t" aria-expanded="false" aria-controls="chmega">Customer Hub <i>▾</i></button><a class="links" href="pricing.html#compare">Compare</a><a class="links" href="blogs.html">DotERP blog</a><a class="logo" href="../index.html">Dot<b>ERP</b></a><span class="sp"></span><a class="links" href="login.html" data-login-link>Log In</a><a class="btn" href="download.html">Download</a></div>
+<div class="mega" id="mega"><div class="mg">
+<div class="mc"><div class="mh"><span class="ic">◆</span><div><b>DotERP</b><small>Our flagship business software</small></div></div><a href="product-overview.html">Product Overview</a><a href="#">What’s New</a><a href="free-trial.html">Instant Demo</a><div class="mb"><a class="btn" href="free-trial.html">Take a Free Trial</a><a class="btn o" href="pricing.html">Buy Now</a></div></div>
+<div class="mc"><div class="mh"><span class="ic">⚙</span><div><b>Features</b><small>What you can do with DotERP</small></div></div><a href="taxation-compliance.html">Taxation &amp; Compliance</a><a href="accounting.html">Accounting</a><a href="inventory.html">Inventory</a><a href="banking.html">Banking</a><a href="connected-services.html">Connected Services</a><a class="all" href="#">View All Features ↗</a></div>
+<div class="mc"><div class="mh"><span class="ic">▤</span><div><b>Do More with DotERP</b><small>Extend and access it your way</small></div></div><a href="cloud-access.html">DotERP Cloud Access</a><a href="whatsapp-billing.html">Billing on WhatsApp</a><a href="mobile-app.html">DotERP Mobile App</a><a href="server.html">DotERP Server</a><a href="business-reports.html">Business Reports</a></div>
+<div class="mc"><div class="mh"><span class="ic">&lt;/&gt;</span><div><b>Developers</b><small>Build and integrate with DotERP</small></div></div><a href="developer-hub.html">Developer Hub</a><a href="customization.html">Customization &amp; Integration</a><a href="api-explorer.html">API Explorer</a></div>
+<div class="mc"><div class="mh"><span class="ic">◇</span><div><b>More from DotERP</b><small>Software for every business need</small></div></div><a href="vyapardot.html">VyaparDot<small>Simple billing for small businesses</small></a><a href="q2dot.html">Q2Dot<small>Excel to Tally/DotERP bulk data entry</small></a><a class="all" href="#">View All Software ↗</a></div>
+</div></div>
+<div class="mega" id="pmega"><div class="mg c4">
+<div class="mc"><div class="mh"><span class="ic">◆</span><div><b>DotERP</b><small>Plans &amp; pricing</small></div></div><a href="pricing.html#doterp">DotERP Pricing</a><a href="pricing.html#compare">Compare Plans</a><a class="btn" href="pricing.html">View Pricing ↗</a></div>
+<div class="mc"><div class="mh"><span class="ic">◇</span><div><b>Other Products</b><small>Pricing by product</small></div></div><a href="pricing.html#vyapardot">VyaparDot</a><a href="pricing.html#q2dot">Q2Dot</a></div>
+<div class="mc"><div class="mh"><span class="ic">₹</span><div><b>Customer Plans</b><small>For existing customers</small></div></div><a href="login.html" data-login-link>Renew Subscription</a><a href="software-services.html">Software Services</a></div>
+<div class="spot"><div class="mh"><span class="ic">★</span><div><b>Need help?</b><small>Support &amp; sales</small></div></div><a href="contact.html"><b>Talk to Sales</b></a></div>
+</div></div><div class="mega" id="cmega"><div class="mg c4">
+<div class="mc"><div class="mh"><span class="ic">✎</span><div><b>Learn</b></div></div><a href="learning-hub.html">Learning Hub</a><a href="blogs.html">Blogs</a></div>
+<div class="mc"><div class="mh"><span class="ic">✉</span><div><b>Connect</b></div></div><a href="community.html">Community</a><a href="customer-stories.html">Customer Stories</a></div>
+<div class="mc"><div class="mh"><span class="ic">★</span><div><b>Featured</b></div></div><a href="events.html">Events</a></div>
+<div class="spot"><div class="mh"><span class="ic">◆</span><div><b>Spotlight</b></div></div><a href="first-60-minutes.html"><b>First 60 minutes in DotERP</b></a></div>
+</div></div>
+<div class="mega" id="chmega"><div class="mg ch">
+<div class="mc"><div class="mh"><span class="ic">☎</span><div><b>Reach Us</b></div></div><a href="help.html">DotERP Help</a><a href="support.html">Support</a></div>
+<div class="mng"><h4>Manage Subscriptions</h4><p>View, renew or upgrade your active DotERP subscriptions in one place.</p><a class="btn w" href="dashboard.html">Open Dashboard ↗</a></div>
+</div></div></nav>
+
+<main class="dash-wrap" id="dashRoot" style="display:none">
+  <div class="dash-head">
+    <div>
+      <h1>Welcome, <span id="dUser">User</span></h1>
+      <p>Manage your DotERP license, subscription, and account details.</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="pricing.html">Renew / Upgrade</a>
+      <button class="btn ghost" type="button" id="logoutBtn">Log Out</button>
+    </div>
+  </div>
+
+  <div class="dash-cards">
+    <div class="dash-card"><small>License Status</small><b id="dStatus">Active</b></div>
+    <div class="dash-card"><small>Product / Edition</small><b id="dProduct">DotERP Gold</b></div>
+    <div class="dash-card"><small>Licensed Users</small><b id="dUsers">5</b></div>
+    <div class="dash-card"><small>Valid Till</small><b id="dExpiry">—</b></div>
+  </div>
+
+  <div class="dash-grid">
+    <section class="panel">
+      <h2>License Details</h2>
+      <table class="lic-table" aria-label="License details">
+        <tr><th>Tally.NET ID</th><td id="dNetId">—</td></tr>
+        <tr><th>Account Name</th><td id="dName">—</td></tr>
+        <tr><th>Serial Number</th><td id="dSerial">—</td></tr>
+        <tr><th>License Key</th><td id="dKey">—</td></tr>
+        <tr><th>Product / Edition</th><td id="dEdition">—</td></tr>
+        <tr><th>Subscription Plan</th><td id="dPlan">—</td></tr>
+        <tr><th>Licensed Users</th><td id="dUserCount">—</td></tr>
+        <tr><th>Activation Date</th><td id="dActivated">—</td></tr>
+        <tr><th>Validity / Expiry</th><td id="dValidity">—</td></tr>
+        <tr><th>Status</th><td><span class="badge" id="dBadge">Active</span></td></tr>
+        <tr><th>Registered Email</th><td id="dEmail">—</td></tr>
+        <tr><th>Registered Mobile</th><td id="dMobile">—</td></tr>
+      </table>
+    </section>
+
+    <aside class="panel">
+      <h2>Quick Actions</h2>
+      <ul class="list">
+        <li><a href="download.html">Download / Update DotERP</a></li>
+        <li><a href="pricing.html">View plans &amp; renew subscription</a></li>
+        <li><a href="software-services.html">Software services &amp; support</a></li>
+        <li><a href="help.html">Get help &amp; documentation</a></li>
+        <li><a href="contact.html">Contact sales/support</a></li>
+      </ul>
+      <p class="muted" style="margin-top:16px">These details are shown for your signed-in account. For license changes, contact DotERP support.</p>
+    </aside>
+  </div>
+</main>
+
+<footer><div class="wrap">
+<div class="about"><strong style="font-size:20px">Dot<span style="color:var(--acc)">ERP</span></strong><span>DotERP is a complete business management platform for billing, accounting, inventory, GST, payroll, and reporting.</span></div>
+<div class="copy">Copyright © 2026 DotERP Solutions Pvt. Ltd. · Privacy Policy · Terms of Use</div>
+</div></footer>
+
+<script src="../js/main.js"></script>
+<script>
+(function(){
+  var api = window.DotERPAuth;
+  if(!api){ document.body.innerHTML='<p style="padding:40px;font-family:sans-serif">Unable to load dashboard. Please refresh.</p>'; return; }
+  var user = api.requireAuth();
+  if(!user) return;
+  document.getElementById('dashRoot').style.display='block';
+  function set(id,val){ var el=document.getElementById(id); if(el) el.textContent = (val==null||val==='') ? '—' : val; }
+  set('dUser', user.name || user.netId || 'User');
+  set('dStatus', user.status || 'Active');
+  set('dProduct', user.product || user.edition || '—');
+  set('dUsers', user.users || '—');
+  set('dExpiry', user.validTill || '—');
+  set('dNetId', user.netId || '—');
+  set('dName', user.company || user.name || '—');
+  set('dSerial', user.serial || '—');
+  set('dKey', user.licenseKey || '—');
+  set('dEdition', user.edition || user.product || '—');
+  set('dPlan', user.plan || '—');
+  set('dUserCount', user.users || '—');
+  set('dActivated', user.activatedOn || '—');
+  set('dValidity', user.validTill || '—');
+  set('dEmail', user.email || '—');
+  set('dMobile', user.mobile || '—');
+  var badge=document.getElementById('dBadge'); if(badge){ badge.textContent=user.status||'Active'; badge.className='badge'+((user.status||'').toLowerCase().indexOf('active')>-1?'':' warn'); }
+  var out=document.getElementById('logoutBtn'); if(out) out.addEventListener('click', function(){ api.logout(); location.href='../index.html'; });
+})();
+</script>
+</body>
+</html>

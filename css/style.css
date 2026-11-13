@@ -1,21 +1,11 @@
-/* ==========================================================
-   DotERP website - main stylesheet
-   Colours are set once in the :root block below.
-   Change them there and the whole site updates.
-   ========================================================== */
 
-/* ---------- 1. Colours, light & dark theme ---------- */
 :root{--bg:#fff8e8;--sky:#e3f1fb;--navy:#0f4c81;--ink:#14243a;--mut:#51627a;--acc:#f59e0b;--accink:#2a1a00;--card:#fff;--line:#c9d8e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1a12;--sky:#10202f;--navy:#0b3558;--ink:#eef3f9;--mut:#a9b8ca;--card:#172a3d;--line:#2c4560;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#1d1a12;--sky:#10202f;--navy:#0b3558;--ink:#eef3f9;--mut:#a9b8ca;--card:#172a3d;--line:#2c4560;color-scheme:dark}
-
-/* ---------- 2. Base ---------- */
 *{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;font-family:'Plus Jakarta Sans',system-ui,Segoe UI,Arial,sans-serif;background:var(--sky);color:var(--ink);line-height:1.55}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-
-/* ---------- 3. Top bar & navigation ---------- */
 .top{background:var(--bg);font-size:12px;border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;justify-content:space-between;padding-top:8px;padding-bottom:8px;color:var(--mut)}
 .top .r a{margin-left:16px}.top .r a:first-child{color:var(--navy);font-weight:600;border-bottom:2px solid var(--navy)}
@@ -25,22 +15,18 @@ nav .logo{font-weight:700;font-size:22px;margin:0 auto;letter-spacing:-.5px}
 nav .logo b{color:var(--acc)}
 nav .sp{flex:1}
 .btn{display:inline-block;background:var(--acc);color:var(--accink);font-weight:600;font-size:14px;padding:9px 18px;border-radius:4px}
-
-/* ---------- 4. Hero ---------- */
 .hero{background:var(--bg);padding:70px 0 90px;position:relative;overflow:hidden}
 .hero:after{content:"";position:absolute;left:-10%;right:-10%;bottom:-60px;height:140px;background:var(--sky);transform:rotate(-3deg)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;position:relative;z-index:1}
-h1{font-size:clamp(34px,5vw,52px);line-height:1.1;margin:0 0 14px;letter-spacing:-1px}
-h1 span{color:var(--navy)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h1 span{color:#6bb7f0}}
+h1,.hero-title{font-size:clamp(34px,5vw,52px);line-height:1.1;margin:0 0 14px;letter-spacing:-1px}
+h1 span,.hero-title span{color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h1 span,:root:not([data-theme="light"]) .hero-title span{color:#6bb7f0}}
 .hero p{color:var(--mut);max-width:420px;margin:0 0 20px}
 .mock{background:var(--card);border:6px solid var(--navy);border-radius:10px;padding:34px 20px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.12);position:relative}
 .mock .n{font-size:34px;font-weight:700}.mock .n b{color:var(--acc)}
 .mock .tag{display:inline-block;background:#7fdcf0;color:#06323d;padding:2px 12px;font-weight:600;margin-top:8px}
 .price{position:absolute;right:-10px;bottom:-34px;background:var(--card);padding:10px 14px;border-radius:6px;text-align:left;font-size:11px;color:var(--mut);box-shadow:0 6px 16px rgba(0,0,0,.12)}
 .price strong{display:block;font-size:22px;color:var(--ink)}
-
-/* ---------- 5. Headings & sections ---------- */
 h2{font-size:clamp(26px,3.5vw,36px);text-align:center;margin:0 0 40px;letter-spacing:-.5px}
 h2 u{text-decoration:none;background:linear-gradient(transparent 78%,var(--acc) 78%,var(--acc) 86%,transparent 86%) no-repeat left/0% 100%;transition:background-size .9s .35s ease}h2.go u{background-size:100% 100%}
 section{padding:70px 0}
@@ -50,8 +36,6 @@ details summary{cursor:pointer;font-weight:600;list-style:none;display:flex;just
 details summary::after{content:"+";font-size:20px;line-height:1}details[open] summary::after{content:"–"}
 details p{color:var(--mut);margin:10px 0 0;font-size:14px}
 .ph{border:2px dashed var(--line);border-radius:10px;min-height:240px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:13px;text-align:center;padding:20px}
-
-/* ---------- 6. Call-to-action, stats, testimonial, cards ---------- */
 .cta{background:var(--navy);border-radius:8px;padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;color:#fff}
 .cta .l{background:var(--card);color:var(--ink);padding:22px;border-radius:6px}
 .cta .l h3{margin:0 0 8px;font-size:22px}.cta .l p{font-size:13px;color:var(--mut);margin:0 0 14px}
@@ -73,8 +57,6 @@ details p{color:var(--mut);margin:10px 0 0;font-size:14px}
 .card h3{margin:0 0 4px;font-size:20px}.card h4{margin:0 0 10px;font-size:13px}
 .card p{font-size:13px;color:var(--mut);margin:0 0 18px}.card a{color:var(--acc);font-weight:600;font-size:13px}
 .card .ph{min-height:110px}
-
-/* ---------- 7. Footer ---------- */
 footer{background:var(--navy);color:#fff;font-size:13px;padding:40px 0 20px}
 footer .about{border-bottom:1px solid #ffffff33;padding-bottom:18px;margin-bottom:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer .about span{max-width:480px;opacity:.9}
@@ -82,18 +64,12 @@ footer .about span{max-width:480px;opacity:.9}
 .cols h5{margin:0 0 10px;color:var(--acc);font-size:14px}
 .cols a{display:block;padding:3px 0;opacity:.9}
 .copy{margin-top:34px;border-top:1px solid #ffffff33;padding-top:16px;opacity:.8}
-
-/* ---------- 8. Mobile layout ---------- */
 @media(max-width:760px){.hero .wrap,.acc,.cta,.quote,.two{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.cols{grid-template-columns:1fr 1fr}nav .links{display:none}.price{position:static;margin-top:14px;display:inline-block}.top .wrap span:first-child{display:none}}
-
-/* ---------- 9. Hero slider ---------- */
 .slides{display:grid;position:relative;z-index:1}.slide{grid-area:1/1;opacity:0;visibility:hidden;transform:translateX(50px);transition:opacity .6s,transform .6s,visibility .6s}.slide.on{opacity:1;visibility:visible;transform:none}.slide.out{transform:translateX(-50px)}
 .ar{position:absolute;top:50%;z-index:3;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:var(--card);color:var(--navy);font-size:24px;line-height:1;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.15)}.ar.l{left:12px}.ar.r{right:12px}
 .dots{position:absolute;left:0;right:0;bottom:28px;z-index:3;display:flex;justify-content:center;gap:8px}.dots button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}.dots button.on{background:var(--navy);width:26px;border-radius:6px}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
 @media(max-width:760px){.ar{display:none}}
-
-/* ---------- 10. Animations & hover effects ---------- */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;transition:box-shadow .3s}nav.sc{box-shadow:0 6px 20px rgba(0,0,0,.25)}
 @keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes pop{from{opacity:0;transform:scale(.8) rotate(-3deg)}to{opacity:1;transform:none}}
@@ -103,8 +79,8 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;transition:box-s
 @keyframes fill{from{width:0}to{width:100%}}
 @keyframes shine{to{left:130%}}
 .hero:before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.4),transparent 70%);right:6%;top:-90px;animation:drift 9s ease-in-out infinite alternate}
-.hero h1 span{background:linear-gradient(90deg,#0f6fb8,#19b3d9,#0f6fb8) 0 0/200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shim 4s linear infinite}
-.slide.on h1{animation:up .7s .15s backwards}.slide.on p{animation:up .7s .3s backwards}.slide.on .btn{animation:up .7s .45s backwards}
+.hero h1 span,.hero .hero-title span{background:linear-gradient(90deg,#0f6fb8,#19b3d9,#0f6fb8) 0 0/200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shim 4s linear infinite}
+.slide.on h1,.slide.on .hero-title{animation:up .7s .15s backwards}.slide.on p{animation:up .7s .3s backwards}.slide.on .btn{animation:up .7s .45s backwards}
 .slide.on .mock{animation:pop .8s .2s backwards,float 5s 1s ease-in-out infinite}.slide.on .price{animation:pop .6s 1s backwards}
 .btn{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(245,158,11,.45)}.btn:active{transform:none}
 .btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.55);transform:skewX(-20deg)}.btn:hover:after{animation:shine .6s}
@@ -117,8 +93,6 @@ details summary{transition:color .2s,padding-left .2s}details summary:hover{colo
 .cta{transition:transform .3s}.cta:hover{transform:scale(1.01)}
 .rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-
-/* ---------- 11. "Products" mega menu ---------- */
 .mm-t{background:none;border:0;border-bottom:3px solid transparent;color:#fff;font:inherit;cursor:pointer;height:56px;padding:0;transition:border-color .25s}.mm-t i{font-style:normal;display:inline-block;transition:transform .3s}.mm-t[aria-expanded=true]{border-color:var(--acc)}.mm-t[aria-expanded=true] i{transform:rotate(180deg)}
 .mega{position:absolute;left:0;right:0;top:100%;background:var(--card);color:var(--ink);font-size:14px;box-shadow:0 24px 40px rgba(0,0,0,.25);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s,transform .3s,visibility .3s}.mega.open{opacity:1;visibility:visible;transform:none}
 .mg{max-width:1100px;margin:0 auto;padding:36px 20px 40px;display:grid;grid-template-columns:repeat(5,1fr)}
@@ -131,8 +105,6 @@ details summary{transition:color .2s,padding-left .2s}details summary:hover{colo
 .mb{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}.mb .btn{padding:9px 14px;font-size:13px}
 .btn.o{background:transparent;color:var(--ink);border:1px solid var(--line)}.btn.o:hover{box-shadow:none;border-color:var(--acc)}
 @media(max-width:900px){.mg{grid-template-columns:1fr 1fr;gap:24px 0}.mc:nth-child(3),.mc:nth-child(5){border-left:0;padding-left:0}}
-
-/* ---------- 12. Scroll bar, ticker, feature cards, dashboard, back-to-top ---------- */
 .pg{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--acc),#19b3d9);z-index:50}
 @keyframes mq{to{transform:translateX(-50%)}}@keyframes bgm{50%{background-position:100% 50%}}
 .mq{overflow:hidden;background:var(--navy);color:#fff;padding:14px 0;position:relative;z-index:2}.mq div{display:flex;width:max-content;animation:mq 30s linear infinite}.mq:hover div{animation-play-state:paused}.mq span{font-weight:600;white-space:nowrap;padding-right:48px}.mq span:before{content:"✦";color:var(--acc);margin-right:12px}
@@ -146,9 +118,79 @@ details summary{transition:color .2s,padding-left .2s}details summary:hover{colo
 .bars{display:flex;align-items:flex-end;gap:10px;height:160px}.bars i{flex:1;height:var(--h);background:linear-gradient(var(--acc),#f7c35c);border-radius:6px 6px 0 0;transform:scaleY(0);transform-origin:bottom;transition:transform .9s cubic-bezier(.2,.8,.2,1) calc(var(--i)*.09s)}.bars i:nth-child(even){background:linear-gradient(#19b3d9,#7fdcf0)}.dash.live .bars i{transform:none}
 .up{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:0;background:var(--acc);color:var(--accink);font-size:20px;cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:.3s;z-index:30;box-shadow:0 6px 16px rgba(0,0,0,.25)}.up.show{opacity:1;transform:none;pointer-events:auto}.up.show:hover{transform:translateY(-4px)}
 @media(max-width:760px){.fg{grid-template-columns:1fr}.c1{left:-8px}.c2{right:-8px}}
-
-/* ---------- 13. "Pricing" dropdown & keyboard focus ---------- */
-.pm{position:relative}.pmb{background:none;border:0;border-bottom:3px solid transparent;color:#fff;font:inherit;cursor:pointer;height:56px;padding:0;transition:border-color .25s}.pmb i{font-style:normal;display:inline-block;transition:transform .3s}.pm:hover .pmb,.pm:focus-within .pmb{border-color:var(--acc)}.pm:hover .pmb i,.pm:focus-within .pmb i{transform:rotate(180deg)}
-.pm .pd{position:absolute;top:100%;left:-10px;min-width:220px;background:var(--card);color:var(--ink);border-radius:0 0 8px 8px;box-shadow:0 18px 34px rgba(0,0,0,.25);padding:8px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}.pm:hover .pd,.pm:focus-within .pd{opacity:1;visibility:visible;transform:none}
+.pm{position:relative}.pmb{background:none;border:0;border-bottom:3px solid transparent;color:#fff;font:inherit;cursor:pointer;height:56px;padding:0;transition:border-color .25s}.pmb i{font-style:normal;display:inline-block;transition:transform .3s}.pm:hover .pmb,.pm:focus-within .pmb,.pm.open .pmb{border-color:var(--acc)}.pm:hover .pmb i,.pm:focus-within .pmb i,.pm.open .pmb i{transform:rotate(180deg)}
+.pm .pd{position:absolute;top:100%;left:-10px;min-width:220px;background:var(--card);color:var(--ink);border-radius:0 0 8px 8px;box-shadow:0 18px 34px rgba(0,0,0,.25);padding:8px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s;z-index:30}.pm:hover .pd,.pm:focus-within .pd,.pm.open .pd{opacity:1;visibility:visible;transform:none}
 .pd a{display:block;padding:11px 14px;border-radius:6px;font-weight:600;transition:background .2s,padding-left .2s}.pd a:hover{background:var(--sky);padding-left:20px}.pd small{display:block;font-weight:400;color:var(--mut);font-size:12px}
+.mg.c4{grid-template-columns:repeat(3,1fr) 1.2fr;align-items:start}.mg.c4 .mc:nth-child(4){border-left:0}
+.spot{background:var(--sky);border-radius:10px;padding:20px;margin-left:8px;animation:up .5s .21s backwards}.spot a{display:block;padding:10px 0;border-top:1px solid var(--line);transition:transform .2s}.spot a:hover{transform:translateX(5px)}.spot a b{display:block;font-size:14px}.spot a small{display:block;font-size:12px;color:var(--mut)}
+@media(max-width:900px){.mg.c4{grid-template-columns:1fr 1fr}}
+.mg.ch{max-width:1240px;grid-template-columns:.85fr .95fr .8fr 1.35fr 1fr;align-items:start}.mg.ch .mc{padding:0 16px}.mg.ch .mc:first-child{padding-left:0}.mg.ch .mh{gap:10px}.mg.ch .mh b{font-size:14px}.mg.ch .mh small{font-size:11px}.mc .btn{margin-top:14px;width:100%;text-align:center}.mc .mh+.btn{margin-top:4px}
+.mc>a.sr{display:flex;justify-content:space-between;gap:8px;white-space:nowrap}.sr em{font-style:normal;color:#1a8fc0;font-size:12px;font-weight:600;white-space:nowrap}
+.mng{background:var(--navy);color:#fff;border-radius:10px;padding:20px;margin-left:8px;animation:up .5s .28s backwards}.mng h4{margin:0 0 8px;font-size:16px}.mng p{margin:0 0 16px;font-size:12px;opacity:.9}.btn.w{background:#fff;color:var(--navy);width:100%;text-align:center}
+@media(max-width:900px){.mg.ch{grid-template-columns:1fr 1fr}}
 a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+/* ===== Responsive/mobile alignment fixes ===== */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video,canvas{max-width:100%;height:auto}
+table{width:100%;max-width:100%}
+pre{max-width:100%;overflow:auto}
+.wrap{width:100%}
+nav .wrap{position:relative;min-height:56px;height:auto;flex-wrap:wrap;gap:10px 14px;padding-top:8px;padding-bottom:8px}
+.nav-toggle{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:8px;cursor:pointer;font-size:20px;line-height:1}
+.nav-toggle span{display:block;width:18px;height:2px;background:#fff;position:relative}
+.nav-toggle span:before,.nav-toggle span:after{content:"";position:absolute;left:0;width:18px;height:2px;background:#fff}
+.nav-toggle span:before{top:-6px}.nav-toggle span:after{top:6px}
+@media (max-width:980px){
+  .nav-toggle{display:inline-flex;order:0}
+  nav .logo{margin:0;order:1}
+  nav .sp{display:none}
+  nav .wrap{justify-content:flex-start}
+  nav .wrap > .btn{margin-left:auto;order:2}
+  nav .wrap > .links[data-login-link], nav .wrap > a.links[href*="login.html"]{order:3}
+  nav .wrap .links, nav .wrap .mm-t{display:none !important;width:100%;order:10;height:auto;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12);text-align:left}
+  nav.mob-open .wrap .links, nav.mob-open .wrap .mm-t{display:block !important}
+  nav .wrap .mm-t{display:none !important}
+  nav.mob-open .wrap .mm-t{display:flex !important;justify-content:space-between;align-items:center}
+  nav .wrap .logo + .links, nav .wrap .links[data-login-link]{width:auto}
+  nav.mob-open .wrap .links[data-login-link], nav.mob-open .wrap a.links[href*="login.html"]:last-of-type{width:100%}
+  nav .wrap > .btn{padding:8px 14px;font-size:13px}
+  .mega{position:static;left:auto;right:auto;top:auto;box-shadow:none;transform:none;max-height:0;overflow:hidden;opacity:1;visibility:visible;display:block;background:#0b3f6b;color:#fff}
+  .mega.open{max-height:5000px;padding:0 0 8px}
+  .mega .mg,.mega .mg.c4,.mega .mg.ch{grid-template-columns:1fr !important;gap:10px;padding:8px 16px 12px;max-width:100%}
+  .mega .mc{padding:10px 0;border-left:0;border-top:1px solid rgba(255,255,255,.15)}
+  .mega .mc:first-child{border-top:0}
+  .mega .mh b,.mega .mh small,.mega a,.mega .mc>a:not(.btn),.mega .sr em{color:#fff !important}
+  .mega .ic{background:rgba(255,255,255,.15);color:#fff}
+  .mega .spot,.mega .mng{margin-left:0}
+  .mega .btn.o{color:#fff;border-color:rgba(255,255,255,.4);background:transparent}
+}
+@media (max-width:760px){
+  nav .links{display:none !important}
+  nav.mob-open .links, nav.mob-open .mm-t{display:block !important}
+  nav.mob-open .mm-t{display:flex !important}
+  .hero{padding:42px 0 56px}
+  .hero .wrap,.acc,.cta,.quote,.two,.fg,.cols,.stats,.mg,.mg.c4,.mg.ch,.grid,.partner-grid,.ev-grid,.cm-layout,.dash-grid,.dash-cards,.steps-row,.features,.fs-grid,.disable-grid,.steps-grid,.sub-cards,.partner-hero .wrap,.layout{grid-template-columns:1fr !important}
+  .cols{grid-template-columns:1fr 1fr !important}
+  .finder,.filters,.toolbar{grid-template-columns:1fr !important}
+  .mock{margin-top:10px}
+  .price{position:static;margin-top:12px}
+  .mq span{padding-right:28px}
+  section{padding:44px 0}
+  h2{margin-bottom:24px}
+}
+@media (max-width:520px){
+  .cols{grid-template-columns:1fr !important}
+  .wrap{padding:0 14px}
+  .btn{padding:9px 14px}
+  .dash-head,.ev-top{flex-direction:column;align-items:flex-start}
+  .tabs{overflow:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .tab{white-space:nowrap}
+  .p-actions a,.p-actions button,.ev-actions a,.ev-actions button,.t-actions a,.t-actions button,.story .actions a,.story .actions button{flex:1 1 auto;text-align:center;justify-content:center}
+  .lic-table{display:block;overflow-x:auto;white-space:nowrap}
+  .footer .about{flex-direction:column}
+}
+/* utility for pages with custom grids */
+[class*="grid"],[class*="cols"],[class*="layout"]{min-width:0}
+.card,.panel,.p-card,.ev-card,.story,.topic,.fc,.step-card,.fcard,.sub-card{min-width:0}
+input,select,textarea,button{max-width:100%}
+.dash-card b,.stat .v{overflow-wrap:anywhere}
